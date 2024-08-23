@@ -17,7 +17,7 @@ Welcome to **Farmer's Aid**—an innovative IoT project aimed at transforming ag
 
 ## 📂 Project Structure
 
-Here's an overview of the files and directories in this repository:
+Here's an overview of the files and directories in this repository:  (Subject to change as and when the project evolves)
 
 ```bash
 ├── index.html         # The main HTML file
