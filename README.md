@@ -22,10 +22,9 @@ Here's an overview of the files and directories in this repository:  (Subject to
 ```bash
 ├── index.html         # The main HTML file
 ├── styles.css         # Custom CSS styles
-├── script.js          # JavaScript for interactivity (optional)
 ├── assets/            # Folder for images, icons, and other assets
-└── README.md          # Project documentation
-└── Circuit            # Circuit Diagram, Code and Libraries Required for the Project
+├── README.md          # Project documentation
+└── circuit/            # Directory for Circuit Diagram, Code and Libraries Required for the Project
 ```
 
 ## 🚀 Getting Started
