@@ -65,7 +65,7 @@ void setup() {
   }
 
   //Call the Functions
-  
+  lcd.clear();
 }
 
 void loop() {
