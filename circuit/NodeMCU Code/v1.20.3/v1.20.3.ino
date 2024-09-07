@@ -1,6 +1,4 @@
-/*Plant watering system with new blynk update
-   Home Page
-*/
+
 //Include the library files
 #include <LiquidCrystal_I2C.h>
 #define BLYNK_PRINT Serial
@@ -8,11 +6,11 @@
 #include <BlynkSimpleEsp8266.h>
 
 //Initialize the LCD display
-LiquidCrystal_I2C lcd(0x27, 16, 2);
+// LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 char auth[] = "Q5gplj5_zkZuBf9EiBstOJAwoKLtNfL_";
-char ssid[] = "CodeBuzzWiFi_2.4Ghz";
-char pass[] = "Mangesh1812";
+char ssid[] = "farmers-aid";
+char pass[] = "test1234";
 
 BlynkTimer timer;
 bool Relay = 0;
@@ -25,8 +23,8 @@ void setup() {
   Serial.begin(9600);
   pinMode(waterPump, OUTPUT);
   digitalWrite(waterPump, LOW);
-  lcd.begin();
-  lcd.backlight();
+  // lcd.begin();
+  // lcd.backlight();
 
   Blynk.begin(auth, ssid, pass, "blynk.cloud", 80);
 
@@ -42,13 +40,13 @@ BLYNK_WRITE(V1) {
   Relay = param.asInt();
 
   if (Relay == 1) {
-    digitalWrite(waterPump, LOW);
-    lcd.setCursor(0, 1);
-    lcd.print("Motor is ON ");
-  } else {
     digitalWrite(waterPump, HIGH);
-    lcd.setCursor(0, 1);
-    lcd.print("Motor is OFF");
+    // lcd.setCursor(0, 1);
+    // lcd.print("Motor is ON ");
+  } else {
+    digitalWrite(waterPump, LOW);
+    // lcd.setCursor(0, 1);
+    // lcd.print("Motor is OFF");
   }
 }
 
@@ -59,10 +57,10 @@ void soilMoistureSensor() {
   value = (value - 100) * -1;
 
   Blynk.virtualWrite(V0, value);
-  lcd.setCursor(0, 0);
-  lcd.print("Moisture :");
-  lcd.print(value);
-  lcd.print(" ");
+  // lcd.setCursor(0, 0);
+  // lcd.print("Moisture :");
+  // lcd.print(value);
+  // lcd.print(" ");
 
 }
 
