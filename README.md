@@ -1,6 +1,4 @@
-Here’s a beautiful and aesthetically pleasing README file for your GitHub repository:
 
----
 
 # 🌾 Farmer's Aid - Empowering Agriculture with Technology
 
